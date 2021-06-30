@@ -1,31 +1,67 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* INIZIO COMMON */
 
 [class*="col"] {
-    height: 50px;
+    min-height: 50px;
     background-color: #006CFA;
     border: 1px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 15px;
 }
 
-[class*="-1"]::after {
-    content: "1 col";
+[class*="nested"]{
+    min-height: 50px;
+    border: 1px solid white;
 }
-
-.col::after {
-    content: "col";
-}
-
 .row {
     color: white;
 }
+.double {
+    height: 100px;
+    color: transparent;
+}
+
+/* FINE COMMON */
+
 
 /* DEBUG */
-.container {
-    border: 1px solid green;
+/* .container {
+    border: 2px solid black;
+} */
+
+@media screen and (max-width: 575px) {
+    [class*="col"] {
+        background-color: #F98866;
+    }
+    [class*="nested"] {
+        background-color: #89DA59;
+    }
 }
+@media screen and (min-width: 576px) and (max-width: 767px) {
+
+    [class*="col"] {
+        background-color: #FF420E;
+    }
+    [class*="nested"] {
+        background-color: #80BD9E;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    [class*="col"] {
+        background-color: #80BD9E;
+    }
+    [class*="nested"] {
+        background-color: #F98866;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    [class*="col"] {
+        background-color: #89DA59;
+    }
+    [class*="nested"] {
+        background-color: #FF420E;
+    }
+}
+
+
