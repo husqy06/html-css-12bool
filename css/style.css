@@ -1,0 +1,13 @@
+[class*="col-"] {
+    height: 50px;
+    background-color: #006CFA;
+    border: 1px solid white;
+}
+
+.container {
+    border: 1px solid green;
+}
+
+[class*="-1"]::after {
+    content: "1 col";
+}
